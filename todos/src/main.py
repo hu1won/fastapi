@@ -15,26 +15,28 @@ app = FastAPI()
 def health_check_handler():
     return {"status": "ok"}
 
-todo_data = {
-    1: {
-        "id": 1,
-        "contnets": "todo test",
-        "is_done": True,
+
+
+# todo_data = {
+#     1: {
+#         "id": 1,
+#         "contnets": "todo test",
+#         "is_done": True,
         
-    },
-    2: {
-        "id": 2,
-        "contnets": "todo test 1",
-        "is_done": False,
+#     },
+#     2: {
+#         "id": 2,
+#         "contnets": "todo test 1",
+#         "is_done": False,
         
-    },
-    3: {
-        "id": 3,
-        "contnets": "todo test 2",
-        "is_done": False,
+#     },
+#     3: {
+#         "id": 3,
+#         "contnets": "todo test 2",
+#         "is_done": False,
         
-    },
-}
+#     },
+# }
 
 @app.get("/todos", status_code=200)
 def get_todos_handler(
